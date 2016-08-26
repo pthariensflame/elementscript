@@ -14,16 +14,17 @@
 # limitations under the License.
 
 [package]
+authors = ["Alexander Ronald Altman <alexanderaltman@me.com>"]
 name = "elementscript"
 version = "0.1.0"
-authors = ["Alexander Ronald Altman <alexanderaltman@me.com>"]
-
-[lib]
-name = "elementscript"
-path = "src/lib.rs"
 
 [[bin]]
 name = "es-mu"
 path = "src/es-mu_main.rs"
 
 [dependencies]
+itertools = "^0.4.18"
+
+[lib]
+name = "elementscript"
+path = "src/lib.rs"
