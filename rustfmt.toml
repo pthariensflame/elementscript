@@ -1,4 +1,4 @@
-# Cargo.toml
+# rustfmt.toml
 # Copyright 2016 Alexander Altman
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,17 +13,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-[package]
-name = "elementscript"
-version = "0.1.0"
-authors = ["Alexander Ronald Altman <alexanderaltman@me.com>"]
-
-[lib]
-name = "elementscript"
-path = "src/lib.rs"
-
-[[bin]]
-name = "es-mu"
-path = "src/es-mu_main.rs"
-
-[dependencies]
+fn_brace_style = "PreferSameLine"
+item_brace_style = "PreferSameLine"
+fn_single_line = true
+where_indent = "Visual"
+where_layout = "Mixed"
+chain_base_indent = "Visual"
+chain_indent = "Visual"
+reorder_imports = true
+single_line_if_else = true
+take_source_hints = false
+wrap_comments = true
+match_block_trailing_comma = true

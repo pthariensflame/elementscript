@@ -1,4 +1,4 @@
-# Cargo.toml
+# .travis.yml
 # Copyright 2016 Alexander Altman
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,17 +13,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-[package]
-name = "elementscript"
-version = "0.1.0"
-authors = ["Alexander Ronald Altman <alexanderaltman@me.com>"]
+language: rust
 
-[lib]
-name = "elementscript"
-path = "src/lib.rs"
-
-[[bin]]
-name = "es-mu"
-path = "src/es-mu_main.rs"
-
-[dependencies]
+rust:
+  - stable
+  - beta
+  - nightly
