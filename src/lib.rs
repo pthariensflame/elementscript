@@ -13,5 +13,23 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-extern crate itertools;
-use itertools::*;
+#[macro_use]
+extern crate error_chain;
+
+pub mod error {
+    error_chain! {
+        errors {
+            InterpreterError
+        }
+    }
+}
+
+#[derive(Debug)]
+pub struct Config;
+
+#[derive(Debug)]
+pub struct Value;
+
+pub fn interpret<I: IntoIterator>(_: Config, _: I) -> error::Result<Value> where I::Item: AsRef<str> {
+    unimplemented!()
+}

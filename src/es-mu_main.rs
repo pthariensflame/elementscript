@@ -13,8 +13,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+use std::io;
+use std::io::prelude::*;
+
 extern crate elementscript;
+use elementscript::*;
 
 fn main() {
-    println!("Hello, world!");
+    let mut program: String = String::new();
+    let _ = io::stdin().read_to_string(&mut program).expect("I/O error");
+    println!("{:?}", interpret(Config, program.split_whitespace()).expect("interpreter error"));
 }
