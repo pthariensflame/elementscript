@@ -1,5 +1,5 @@
 // es-mu_main.rs
-// Copyright 2016 Alexander Altman
+// Copyright 2017 Alexander Altman
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -22,5 +22,5 @@ use elementscript::*;
 fn main() {
     let mut program: String = String::new();
     let _ = io::stdin().read_to_string(&mut program).expect("I/O error");
-    println!("{:?}", interpret(Config, program.split_whitespace()).expect("interpreter error"));
+    println!("{:?}", interpret(Config, program).expect("interpreter error"));
 }

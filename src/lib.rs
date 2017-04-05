@@ -1,5 +1,5 @@
 // lib.rs
-// Copyright 2016 Alexander Altman
+// Copyright 2017 Alexander Altman
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -30,6 +30,6 @@ pub struct Config;
 #[derive(Debug)]
 pub struct Value;
 
-pub fn interpret<I: IntoIterator>(_: Config, _: I) -> error::Result<Value> where I::Item: AsRef<str> {
+pub fn interpret<S: AsRef<str>>(_config: Config, _program: S) -> error::Result<Value> {
     unimplemented!()
 }
