@@ -22,5 +22,5 @@ use elementscript::*;
 fn main() {
     let mut program: String = String::new();
     let _ = io::stdin().read_to_string(&mut program).expect("I/O error");
-    println!("{:?}", interpret(Config, program).expect("interpreter error"));
+    println!("{:?}", interpret(Config, program).expect("Interpreter error"));
 }
