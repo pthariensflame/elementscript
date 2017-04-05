@@ -23,11 +23,7 @@ use itertools::*;
 extern crate error_chain;
 
 pub mod error {
-    error_chain! {
-        errors {
-            InterpreterError
-        }
-    }
+    error_chain!{}
 }
 
 #[derive(Debug)]
