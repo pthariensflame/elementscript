@@ -24,6 +24,5 @@ fn main() {
     let _ = io::stdin()
         .read_to_string(&mut program)
         .expect("I/O error");
-    println!("{:?}",
-             interpret(Config, program).expect("Interpreter error"));
+    let _ = interpret(Config, program).expect("Interpreter error");
 }
