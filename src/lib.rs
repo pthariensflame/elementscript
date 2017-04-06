@@ -22,9 +22,6 @@ use itertools::*;
 extern crate unicode_segmentation;
 use unicode_segmentation::UnicodeSegmentation;
 
-extern crate liner;
-use liner::Context;
-
 #[macro_use]
 extern crate error_chain;
 
@@ -38,6 +35,6 @@ pub struct Config;
 #[derive(Debug)]
 pub struct Value;
 
-pub fn interpret<S: AsRef<str>>(_config: Config, _program: S) -> error::Result<Value> {
+pub fn interpret<P: IntoIterator>(_config: Config, _program: P) -> error::Result<Value> where P::Item: Tokens  {
     unimplemented!()
 }

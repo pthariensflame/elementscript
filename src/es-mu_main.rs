@@ -13,16 +13,22 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-use std::io;
-use std::io::prelude::*;
-
 extern crate elementscript;
 use elementscript::*;
 
+extern crate liner;
+use liner::Context;
+
 fn main() {
-    let mut program: String = String::new();
-    let _ = io::stdin()
-        .read_to_string(&mut program)
-        .expect("I/O error");
-    let _ = interpret(Config, program).expect("Interpreter error");
+    let mut cxt = Context::new();
+    const DEFAULT_PROMPT_STRING: &str = "es-μ» ";
+    let prompt_string = DEFAULT_PROMPT_STRING;
+    loop {
+        loop {
+            let line = match cxt.read_line(prompt_string, &mut |_| {}) {
+            Ok(l) => l,
+            Err(s) => (),
+        };
+        }
+    }
 }
