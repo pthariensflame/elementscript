@@ -23,9 +23,10 @@ name = "es-mu"
 path = "src/es-mu_main.rs"
 
 [dependencies]
-error-chain = "0.10.0"
-unicode-segmentation = "1.1.0"
-itertools = "0.5.10"
+error-chain = "^0.10.0"
+unicode-segmentation = "^1.1.0"
+itertools = "^0.5.10"
+liner = "^0.1.4"
 
 [lib]
 name = "elementscript"

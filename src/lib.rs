@@ -19,6 +19,12 @@
 extern crate itertools;
 use itertools::*;
 
+extern crate unicode_segmentation;
+use unicode_segmentation::UnicodeSegmentation;
+
+extern crate liner;
+use liner::Context;
+
 #[macro_use]
 extern crate error_chain;
 
