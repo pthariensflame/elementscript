@@ -22,6 +22,9 @@ use itertools::*;
 extern crate unicode_segmentation;
 use unicode_segmentation::UnicodeSegmentation;
 
+extern crate unicode_normalization;
+use unicode_normalization::UnicodeNormalization;
+
 #[macro_use]
 extern crate error_chain;
 
