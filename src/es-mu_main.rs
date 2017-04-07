@@ -23,12 +23,11 @@ fn main() {
     let mut cxt = Context::new();
     const DEFAULT_PROMPT_STRING: &str = "es-μ» ";
     let prompt_string = DEFAULT_PROMPT_STRING;
+    let mut line = String::new();
     loop {
-        loop {
-            let line = match cxt.read_line(prompt_string, &mut |_| {}) {
-            Ok(l) => l,
-            Err(s) => (),
-        };
-        }
+        line += &match cxt.read_line(prompt_string, &mut |_| {}) {
+                     Ok(l) => l + "\n",
+                     Err(_) => break,
+                 };
     }
 }

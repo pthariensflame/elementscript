@@ -33,11 +33,16 @@ pub mod error {
 }
 
 #[derive(Debug)]
-pub struct Config;
+pub struct Config {}
 
 #[derive(Debug)]
-pub struct Value;
+pub struct Token {}
 
-pub fn interpret<P: IntoIterator>(_config: Config, _program: P) -> error::Result<Value> where P::Item: Tokens  {
+#[derive(Debug)]
+pub struct Value {}
+
+pub fn interpret<P: IntoIterator>(_config: Config, _program: P) -> error::Result<Value>
+    where P::Item: Into<Token>
+{
     unimplemented!()
 }
